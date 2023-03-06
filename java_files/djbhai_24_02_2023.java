@@ -133,7 +133,7 @@ public  static String base64_decode (final String _text) {
 	
 	
 	
-	public static String base64_encode (final String _text) {
+public static String base64_encode (final String _text) {
 		String encoded = "";
 		final byte[] data;
 		try {

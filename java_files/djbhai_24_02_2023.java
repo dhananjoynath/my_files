@@ -147,8 +147,34 @@ public static String base64_encode (final String _text) {
 			
 		}
 		return encoded;
-	}
+}
 
+
+
+
+public static String file2base64 (final String _filepath) {
+		String djbhai_base64_outData ="";
+
+		    java.io.File file = new java.io.File(_filepath);
+		
+		    try (java.io.FileInputStream InFile = new java.io.FileInputStream(file)) {
+			    byte fileData[] = new byte[(int) file.length()];
+			    InFile.read(fileData);
+			    byte[] encodedBytesFile = org.apache.commons.codec.binary.Base64.encodeBase64(fileData);
+
+			    djbhai_base64_outData = new String(encodedBytesFile);
+			    
+			    } catch (java.io.FileNotFoundException e) {
+			return "file_not_found";
+			
+			    } catch (java.io.IOException ioe) {
+			        return "file_cant_read";
+			    }
+		    
+		    return djbhai_base64_outData;
+		
+		
+}
 
 
 
@@ -170,6 +196,10 @@ public static String md5 (final String _input) {
 			    throw new RuntimeException(e); 
 		} 
 }
+
+
+
+
 
 
 

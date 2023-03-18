@@ -2,11 +2,6 @@
 <head>
 <title> DJBHAI</title>
 
-<?php 
-
-
-//include "../header_files.php";
- ?>
 </head>
 
 

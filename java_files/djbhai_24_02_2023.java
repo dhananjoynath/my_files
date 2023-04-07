@@ -198,18 +198,10 @@ public static String md5 (final String _input) {
 }
 
 
-
-
-
-
-
-
-
 public static String First_Letter_Uppercase (final String _string) {
 	return _string.substring(0, 1).toUpperCase() + _string.substring(1);
 		
-	}
-
+}
 
 
 
